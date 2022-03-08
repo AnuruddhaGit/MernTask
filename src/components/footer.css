@@ -1,0 +1,17 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: lightgray;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+.g-m {
+  margin-top: 14px;
+}
+.logo {
+  height: 50px;
+  width: 50px;
+}

@@ -1,0 +1,26 @@
+table th {
+  text-align: center;
+}
+
+.table {
+  margin: auto;
+  width: 50% !important;
+}
+.table {
+  border: 1px solid gray;
+}
+
+.headingList {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: gray;
+}
+
+.backfont {
+  font-size: 16px;
+  text-align: center;
+}
+.backbt {
+  margin-bottom: 0px !important;
+}

@@ -1,0 +1,48 @@
+.c_form {
+  margin-left: 35%;
+  margin-right: 35%;
+  width: 30%;
+  margin-top: 5%;
+  margin-bottom: 11%;
+}
+
+.btn-mr {
+  margin-left: 45%;
+  margin-right: 38%;
+  margin-top: 5%;
+}
+.form_rd {
+  border: 1px solid lightgray;
+  padding: 50px;
+  border-radius: 25px;
+}
+
+.f_font {
+  font-size: 14px;
+}
+.f_font_head {
+  font-size: 20px;
+}
+.f_para {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.errorMsg {
+  font-size: 13px;
+  color: red;
+  font-weight: bold;
+}
+.successMsg {
+  font-size: 13px;
+  color: green;
+  font-weight: bold;
+}
+.headingCen {
+  text-align: center;
+}
+
+.table td {
+  text-align: center;
+}
