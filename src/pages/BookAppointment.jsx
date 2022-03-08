@@ -35,18 +35,14 @@ export default function BookAppointment() {
 
   // Handling the slots change
   const handleSlots = (e) => {
-    console.log("hi..", e);
+    // alert("ji.....");
+    setSubmitted(false);
     var value = slots.filter(function (item) {
-      // console.log("key ", item._id);
-      console.log("value", e.target.value);
-      console.log("id", item._id);
       return item._id === e.target.value;
     });
-    console.log("vai", value[0].slots);
     setSelectedSlots(e.target.value);
     setId(e.target.value);
     setSlottime(value[0].slots);
-    setSubmitted(false);
   };
 
   const getSlotData = () => {
@@ -68,8 +64,7 @@ export default function BookAppointment() {
   // Handling the form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("object", id);
-    if (name === "" || mobile_number === "" || slots === "") {
+    if (name === "" || mobile_number === "" || selectedslots === "") {
       setError(true);
     } else {
       setSubmitted(true);
@@ -124,7 +119,7 @@ export default function BookAppointment() {
         setTimeout(function () {
           window.location.reload(1);
         }, 6000);
-        toast.error("Something wen wrong!", {
+        toast.error("Something went wrong!", {
           position: "top-center",
           autoClose: 5000,
           hideProgressBar: false,
@@ -160,11 +155,12 @@ export default function BookAppointment() {
   return (
     <form className="c_form form_rd">
       <ToastContainer />
+      <h4 className="f_font_head">User appointment booking </h4>
       <div className="messages">
         {errorMessage()}
         {/* {successMessage()} */}
       </div>
-      <h4 className="f_font_head">User appointment booking </h4>
+
       <div className="form-group">
         <label htmlFor="name" className="f_font">
           Name
@@ -212,10 +208,12 @@ export default function BookAppointment() {
         <select
           className="form-control"
           name="slots"
+          id="slots"
           value={selectedslots}
           onChange={handleSlots}
+          required
         >
-          <option>Select Slots</option>
+          <option readOnly>Select Slots</option>
           {slots.map((data, key) => {
             return (
               <option key={key} value={data._id}>
